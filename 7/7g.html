@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    7g.
+  </title>
+
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+  
+
+  <script>
+    function convertLength(length, from, to) {
+      if(from === 'miles' && to === 'km') {
+        return `${length * 1.6} km`;
+      } else if(from === 'km' && to === 'miles') {
+        return `${length / 1.6} km`;
+      } else if( from === to ) {
+        return `${length} km`;
+      }
+
+       // You can also do if (from === 'km' && to === 'km) { ... }
+        // if (from === to) is a trick you can use to save some code.
+    }
+
+    console.log(convertLength(50,'miles','km'));
+    console.log(convertLength(32,'km','miles'));
+    console.log(convertLength(50,'km','km'));
+  </script>
+
+</body>
+
+</html>

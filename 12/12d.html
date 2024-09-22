@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      12d.
+    </title>
+    <style>
+     
+    </style>
+  </head>
+  <body>
+
+    <button class="js-button">Start</button>
+    
+    <script>
+      // Grouping the JavaScript code into a function
+      // is optional, but it is a bit cleaner.
+     document.querySelector('.js-button')
+      .addEventListener('click', () => {
+        const button = document.querySelector('.js-button');
+
+        button.innerHTML = 'Loading...';
+        setTimeout(() => {
+          button.innerHTML = 'Finished!';
+        }, 1000);
+      });
+        
+
+      
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    12d.
+  </title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <button class="js-button">Add to cart</button>
+  <P class="js-message"></P>
+
+  <script>
+    document.querySelector('.js-button')
+      .addEventListener('click', () => {
+        const messageElement = document.querySelector('.js-message');
+
+        messageElement.innerHTML = 'Added';
+
+        timeoutId = setTimeout(() => {
+          messageElement.innerHTML = '';
+        }, 2000);
+      });
+
+
+
+  </script>
+
+</body>
+
+</html>

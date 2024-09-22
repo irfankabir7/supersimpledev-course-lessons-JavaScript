@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    12h.App
+  </title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <button class="js-add-button">Add</button>
+  <button class="js-remove-button">Remove</button>
+
+  <script>
+    let messages = 2;
+
+    document.querySelector('.js-add-button')
+      .addEventListener('click', () => {
+          messages++;
+      });
+
+      document.querySelector('.js-remove-button')
+      .addEventListener('click', () => {
+          messages--;
+      });
+
+    setInterval(() => {
+      if (document.title === '12h.App') {
+        document.title = `(${messages}) New messages`;
+      } else {
+        document.title = '12h.App';
+      }
+    }, 1000);
+
+  </script>
+
+</body>
+
+</html>
