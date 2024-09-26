@@ -6,40 +6,38 @@
     Calculator
   </title>
 
-  <style>
-
-  </style>
+  <link rel="stylesheet" href="calculator.css">
 
 </head>
 
 <body>
+
+ <!-- Create an element to display the calculation. -->
+  <p class="js-calculation calculation"></p>
+
   <!-- First part -->
   <p>
 
-    <button onclick="
-      calculation += '1';
-      console.log(calculation);
+    <button class="calculator-button gray-button" onclick="
+      updateCalculation('1');
       ">
       1
     </button>
 
-    <button onclick="
-      calculation += '2';
-      console.log(calculation);
+    <button class="calculator-button gray-button" onclick="
+    updateCalculation('2');
       ">
       2
     </button>
 
-    <button onclick="
-      calculation += '3';
-      console.log(calculation);
+    <button class="calculator-button gray-button" onclick="
+     updateCalculation('3');
       ">
       3
     </button>
 
-    <button onclick="
-      calculation += '+';
-      console.log(calculation);
+    <button class="calculator-button orange-button"  onclick="
+      updateCalculation('+');
       ">
       +
     </button>
@@ -48,30 +46,26 @@
   <!-- second part -->
 
   <p>
-    <button onclick="
-      calculation += '4';
-      console.log(calculation);
+    <button class="calculator-button gray-button" onclick="
+     updateCalculation('4');
       ">
       4
     </button>
 
-    <button onclick="
-      calculation += '5';
-      console.log(calculation);
+    <button class="calculator-button gray-button" onclick="
+      updateCalculation('5');
       ">
       5
     </button>
 
-    <button onclick="
-      calculation += '6';
-      console.log(calculation);
+    <button class="calculator-button gray-button" onclick="
+     updateCalculation('6');
       ">
       6
     </button>
 
-    <button onclick="
-      calculation += '-';
-      console.log(calculation);
+    <button class="calculator-button orange-button"  onclick="
+      updateCalculation('-');
       ">
       -
     </button>
@@ -81,30 +75,26 @@
 
 
   <p>
-    <button onclick="
-      calculation += '7';
-      console.log(calculation);
+    <button class="calculator-button gray-button" onclick="
+      updateCalculation('7');
       ">
       7
     </button>
 
-    <button onclick="
-      calculation += '8';
-      console.log(calculation);
+    <button class="calculator-button gray-button" onclick="
+      updateCalculation('8');
       ">
       8
     </button>
 
-    <button onclick="
-      calculation += '9';
-      console.log(calculation);
+    <button class="calculator-button gray-button" onclick="
+     updateCalculation('9');
       ">
       9
     </button>
 
-    <button onclick="
-      calculation += '*';
-      console.log(calculation);
+    <button class="calculator-button orange-button"  onclick="
+     updateCalculation('*');
       ">
       *
     </button>
@@ -113,50 +103,57 @@
   <!--Fourth part-->
 
   <p>
-    <button onclick="
-      calculation += '0';
-      console.log(calculation);
+    <button class="calculator-button gray-button" onclick="
+      updateCalculation('0');
       ">
       0
     </button>
 
-    <button onclick="
-      calculation += '.';
-      console.log(calculation);
+    <button class="calculator-button gray-button" onclick="
+      updateCalculation('.');
       ">
       .
     </button>
 
-    <button onclick="
+    <button class="calculator-button gray-button" onclick="
       // Note: eval() takes a string and runs it as code.
       // Avoid using eval() in real world projects since
       // it can potentially be given harmful code to run.
       // Only use eval() for learning purposes.
       calculation = eval(calculation);
-      console.log(calculation);
+
+      // Display the calculation on the page
+      // instead of console.log
+        displayCalculation();
+
+      // Remember to save the calculation here.
+      localStorage.setItem('calculation', calculation);
       ">
       =
     </button>
-    <button onclick="
-      calculation += '/';
-      console.log(calculation);
+    <button class="calculator-button orange-button"  onclick="
+      updateCalculation('/');
       ">
       /
     </button>
 
   <p>
-    <button onclick="
+    <button class="calculator-button gray-button clear-button" onclick="
       calculation = ' ';
-      console.log(calculation);
+      
+      // Display the calculation on the page
+      // instead of console.log
+        displayCalculation();
+
+      // Remember to save the calculation here.
+      localStorage.setItem('calculation', calculation);
       ">
       clear
     </button>
   </p>
 
 
-  <script>
-    let calculation = '';
-  </script>
+  <script src="calculator.js"></script>
 
 </body>
 
